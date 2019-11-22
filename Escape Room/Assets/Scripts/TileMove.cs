@@ -28,8 +28,8 @@ public class TileMove : MonoBehaviour
             ytemp = this.transform.position.y;
 
             // 6 should be replaced with whatever the z value of the group holding the tiles is
-            this.transform.position = new Vector3(slot.position.x, slot.position.y, 6f);
-            slot.position = new Vector3(xtemp, ytemp, 6f);
+            this.transform.position = new Vector3(slot.position.x, slot.position.y, 0f);
+            slot.position = new Vector3(xtemp, ytemp, 0f);
         }
     }
 }
