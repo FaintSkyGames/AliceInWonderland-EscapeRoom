@@ -7,19 +7,16 @@ public class SlidePuzzle : MonoBehaviour
     public Transform tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9;
     public Transform slot;
 
-    // real world is not the same as when associated with an object
-    static public int z = 0;
-    static public int y = 0;
 
-    private Vector3 position1 = new Vector3(1, 9-y, z);
-    private Vector3 position2 = new Vector3(2, 9-y, z);
-    private Vector3 position3 = new Vector3(3, 9-y, z);
-    private Vector3 position4 = new Vector3(1, 8-y, z);
-    private Vector3 position5 = new Vector3(2, 8-y, z);
-    private Vector3 position6 = new Vector3(3, 8-y, z);
-    private Vector3 position7 = new Vector3(1, 7-y, z);
-    private Vector3 position8 = new Vector3(2, 7-y, z);
-    private Vector3 position9 = new Vector3(3, 7-y, z);
+    private Vector3 position1 = new Vector3(-1, 4, 0);
+    private Vector3 position2 = new Vector3(0, 4, -0);
+    private Vector3 position3 = new Vector3(1, 4, 0);
+    private Vector3 position4 = new Vector3(-1, 3, 0);
+    private Vector3 position5 = new Vector3(0, 3, 0);
+    private Vector3 position6 = new Vector3(1, 3, 0);
+    private Vector3 position7 = new Vector3(-1, 2, 0);
+    private Vector3 position8 = new Vector3(0, 2, 0);
+    private Vector3 position9 = new Vector3(1, 2, 0);
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +27,8 @@ public class SlidePuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tile9.position != new Vector3(3, 7, 0))
+        // This is done to reduce processing.
+        if (tile9.position != position9)
         {
             RunChecks();
         }
@@ -96,8 +94,8 @@ public class SlidePuzzle : MonoBehaviour
                                     if (CheckTile(tile8, 8))
                                     {
                                         Debug.Log("Complete");
-                                        tile9.position = new Vector3(3, 7, 0);
-                                        slot.position = new Vector3(2, 8, 1);
+                                        tile9.position = new Vector3(1, 2, 0);
+                                        slot.position = new Vector3(-1, 2, 1);
                                     }
                                 }
                             }

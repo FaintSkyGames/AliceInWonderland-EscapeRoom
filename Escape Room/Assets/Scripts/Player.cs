@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject tempParent;
     public float speed = 5;
     private Rigidbody rb;
     private Vector3 moveDirection;
