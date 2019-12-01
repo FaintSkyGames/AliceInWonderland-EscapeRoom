@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TeaPour : MonoBehaviour
 {
-    public Material originalMaterial;
-    public Material newMaterial;
+    public Material notActiveMaterial;
+    public Material activeMaterial;
     public GameObject item;
+    public string Name;
 
     // Start is called before the first frame update
     void Start()
@@ -17,13 +18,23 @@ public class TeaPour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (PlayerPrefs.GetString(Name) == "Active")
+        {
+            this.GetComponent<MeshRenderer>().material = activeMaterial;
+        }
+        else
+        {
+            this.GetComponent<MeshRenderer>().material = notActiveMaterial;
+        }
+
     }
     private void OnMouseDown()
     {
         if (item.transform.parent != null)
         {
-            this.GetComponent<MeshRenderer>().material = newMaterial;
+            this.GetComponent<MeshRenderer>().material = activeMaterial;
+            PlayerPrefs.SetString(Name, "Active");
         }
     }
+
 }
