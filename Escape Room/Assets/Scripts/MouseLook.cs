@@ -10,7 +10,6 @@ public class MouseLook : MonoBehaviour
     private Vector2 mouseDirection;
     private Transform body;
     
-    // Start is called before the first frame update
     void Start()
     {
         //Cursor.lockState = CursorLockMode.Locked;
@@ -20,7 +19,6 @@ public class MouseLook : MonoBehaviour
         body = this.transform.parent.transform;
     }
 
-    // Update is called once per frame
     void Update()
     {        
         Vector2 mouseChange = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));

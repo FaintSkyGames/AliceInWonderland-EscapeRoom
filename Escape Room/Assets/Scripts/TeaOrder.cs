@@ -11,6 +11,8 @@ public class TeaOrder : MonoBehaviour
     public GameObject cup5;
     public GameObject cup6;
 
+    public GameManager gameManager;
+
     private bool allCupsActive = false;
     private int currentItteration = 0;
 
@@ -55,6 +57,9 @@ public class TeaOrder : MonoBehaviour
                             {
                                 currentItteration += 1;
                                 allCupsActive = true;
+
+                                gameManager.BackToMainMenu();
+
                             }
                         }
                     }
