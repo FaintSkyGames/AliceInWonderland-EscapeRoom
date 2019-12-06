@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject menu = null;
+    public GameObject pointer = null;
     private bool isShowing = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pointer.SetActive(true);
     }
 
     // Update is called once per frame
@@ -21,7 +22,18 @@ public class GameManager : MonoBehaviour
         {
             isShowing = !isShowing;
             menu.SetActive(isShowing);
+            pointer.SetActive(!isShowing);
+
+            if (menu.active == isShowing)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (pointer.active == isShowing)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
+
     }
 
     public void StartGame()
