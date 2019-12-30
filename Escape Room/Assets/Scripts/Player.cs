@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
         y *= Time.deltaTime;
 
         moveDirection = (x * transform.right + y * transform.forward).normalized;
+
+        Interact();
     }
 
     private void FixedUpdate()
@@ -35,5 +37,41 @@ public class Player : MonoBehaviour
         // move direction keeps setting y velocity to 0
         // to get the player to fall correctly we need to add it back
         rb.velocity += correctYVelocity;
+    }
+
+    private void Interact()
+    {
+        if (Input.GetKey("e"))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                if (hit.collider.tag == "PickUp")
+                {
+                    Debug.Log("Here is an object!");
+                }
+            }
+        }
+
+        /*
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward), out hit, 100))
+        {
+            if (hit.collider.tag == "PickUp")
+            {
+                Debug.Log("Here is an object!");
+            }
+            else
+            {
+                Debug.Log("hit");
+            }
+            
+        }
+        else
+        {
+            Debug.Log("No hit.");
+        }
+        */
     }
 }

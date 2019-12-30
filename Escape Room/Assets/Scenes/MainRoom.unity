@@ -206,6 +206,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
       propertyPath: slot
@@ -445,6 +450,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
       propertyPath: slot
@@ -529,6 +539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
       propertyPath: slot
@@ -612,6 +627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: teapot
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b0e3bec0cce8deb4381fffb00cddea42,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: b0e3bec0cce8deb4381fffb00cddea42,
         type: 3}
@@ -899,6 +919,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
       objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
@@ -1450,6 +1475,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
       propertyPath: slot
@@ -1850,7 +1880,7 @@ GameObject:
   - component: {fileID: 723473226}
   m_Layer: 0
   m_Name: SlidePuzzle
-  m_TagString: Untagged
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2679,6 +2709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
       propertyPath: slot
@@ -2949,6 +2984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tile 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
       objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
@@ -3949,6 +3989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
+      objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
       propertyPath: slot
@@ -4747,6 +4792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921725550749381522, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
+        type: 3}
+      propertyPath: m_TagString
+      value: PickUp
       objectReference: {fileID: 0}
     - target: {fileID: -3509477470780376674, guid: 7bac70ffa2be9d9419d8e6cc58b5144f,
         type: 3}
