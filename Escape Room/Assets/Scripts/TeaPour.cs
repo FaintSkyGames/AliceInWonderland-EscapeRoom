@@ -32,6 +32,7 @@ public class TeaPour : MonoBehaviour
     {
         if (item.transform.parent != null)
         {
+            gameObject.SendMessage("PourTea");
             this.GetComponent<MeshRenderer>().material = activeMaterial;
             PlayerPrefs.SetString(Name, "Active");
         }
