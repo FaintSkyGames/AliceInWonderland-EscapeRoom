@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Camera camera;
+
     public GameObject tempParent;
     public float speed = 5;
     private Rigidbody rb;
@@ -41,10 +43,10 @@ public class Player : MonoBehaviour
 
     private void Interact()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetKey("e") || Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
                 if (hit.collider.tag == "PickUp")
@@ -53,6 +55,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        
 
         /*
         RaycastHit hit;
