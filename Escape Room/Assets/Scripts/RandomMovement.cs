@@ -19,8 +19,6 @@ public class RandomMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        float maxrange = 0.3f;
-        float minrange = 0.0f;
 
         // Gives the target a random speed and a destination to move towards
         //velocityMax = Random.Range(minrange, maxrange);

@@ -11,10 +11,20 @@ public class TeaOrder : MonoBehaviour
     public GameObject cup5;
     public GameObject cup6;
 
-    public GameManager gameManager;
+    public GameObject vial;
+
+    private AudioSource audioSource;
+    public AudioClip drain;
+    public AudioClip pour;
 
     private bool allCupsActive = false;
     private int currentItteration = 0;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,6 +38,9 @@ public class TeaOrder : MonoBehaviour
                 if (CheckOrder() != currentItteration)
                 {
                     DeactivateAll();
+                    audioSource.Stop();
+                    audioSource.clip = drain;
+                    audioSource.Play();
                 }
             }
         }
@@ -58,8 +71,7 @@ public class TeaOrder : MonoBehaviour
                                 currentItteration += 1;
                                 allCupsActive = true;
 
-                                gameManager.BackToMainMenu();
-
+                                vial.SetActive(true);
                             }
                         }
                     }
@@ -96,5 +108,13 @@ public class TeaOrder : MonoBehaviour
         PlayerPrefs.SetString("Cup4", "Not active");
         PlayerPrefs.SetString("Cup5", "Not active");
         PlayerPrefs.SetString("Cup6", "Not active");
+    }
+
+    public void PlayPourSound()
+    {
+        audioSource.Stop();
+        audioSource.clip = pour;
+        audioSource.Play();
+
     }
 }

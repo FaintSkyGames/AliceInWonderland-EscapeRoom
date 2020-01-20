@@ -7,7 +7,7 @@ public class SlidePuzzle : MonoBehaviour
     public Transform tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9;
     public Transform slot;
     public GameObject trolley;
-    public GameObject teaCup;
+    public GameObject teaPot;
 
 
     private Vector3 position1 = new Vector3(-1, 4, 0);
@@ -99,9 +99,9 @@ public class SlidePuzzle : MonoBehaviour
                                         tile9.position = new Vector3(1, 2, 0);
                                         slot.position = new Vector3(-1, 2, 1);
 
-                                        trolley.transform.position = new Vector3(0, 1, -3);
-                                        teaCup.transform.position = new Vector3(0, 2, -3);
-                                        teaCup.GetComponent<Rigidbody>().useGravity = true;
+                                        trolley.transform.position = new Vector3(-1, 0.34f, -3);
+                                        teaPot.transform.position = new Vector3(-1, 1.6f, -3.16f);
+                                        teaPot.GetComponent<Rigidbody>().useGravity = true;
                                     }
                                 }
                             }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TeaPour : MonoBehaviour
 {
-    public Material notActiveMaterial;
-    public Material activeMaterial;
+    public GameObject liquid;
     public GameObject item;
     public string Name;
 
@@ -20,20 +19,21 @@ public class TeaPour : MonoBehaviour
     {
         if (PlayerPrefs.GetString(Name) == "Active")
         {
-            this.GetComponent<MeshRenderer>().material = activeMaterial;
+            liquid.SetActive(true);
         }
         else
         {
-            this.GetComponent<MeshRenderer>().material = notActiveMaterial;
+            liquid.SetActive(false);
         }
 
     }
-    private void PerformAction()
+    private void OnMouseDown()
     {
         if (item.transform.parent != null)
         {
-            gameObject.SendMessage("PourTea");
-            this.GetComponent<MeshRenderer>().material = activeMaterial;
+            //gameObject.SendMessage("PourTea");
+            gameObject.SendMessageUpwards("PlayPourSound");
+            liquid.SetActive(true);
             PlayerPrefs.SetString(Name, "Active");
         }
     }
