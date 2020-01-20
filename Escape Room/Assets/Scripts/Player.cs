@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Camera camera;
+    public Transform camera;
 
     public GameObject tempParent;
     public float speed = 5;
@@ -46,14 +46,17 @@ public class Player : MonoBehaviour
         if (Input.GetKey("e") || Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            if (Physics.Raycast(ray, out hit, 100.0f))
-            {
+
+            if (Physics.Raycast(camera.position, transform.TransformDirection(camera.forward), out hit, 100))
+             {
+                Debug.Log(hit.transform.gameObject.tag);
                 if (hit.collider.tag == "PickUp")
                 {
-                    Debug.Log("Here is an object!");
+                    Debug.Log(hit.transform.gameObject.name);
+                    hit.transform.SendMessage("PerformAction");
                 }
             }
+            
         }
         
 

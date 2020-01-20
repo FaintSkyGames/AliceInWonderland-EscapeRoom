@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         // Loads the Game scene
         isShowing = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("MainRoom");
     }
 
@@ -47,17 +48,19 @@ public class GameManager : MonoBehaviour
     {
         // Loads the Main Menu scene
         isShowing = false;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("MainMenu");
     }
+
     public void Quit()
     {
         // Ends the program
         Application.Quit();
     }
 
-
-
-
-
+    public void Controls()
+    {
+        menu.SetActive(!menu.active);
+    }
 
 }

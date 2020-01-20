@@ -28,7 +28,7 @@ public class TeaPour : MonoBehaviour
         }
 
     }
-    private void OnMouseDown()
+    private void PerformAction()
     {
         if (item.transform.parent != null)
         {
