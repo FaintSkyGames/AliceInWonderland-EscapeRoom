@@ -9,10 +9,13 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     private Vector3 moveDirection;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,9 +24,25 @@ public class Player : MonoBehaviour
         //gets input along x-axis
         float x = Input.GetAxis("Horizontal");
         x *= Time.deltaTime;
+        Debug.Log(x);
+
         //gets input along y-axis
         float y = Input.GetAxis("Vertical");
         y *= Time.deltaTime;
+        Debug.Log(y);
+
+        
+        if (x != 0 && y != 0)
+        {
+            Debug.Log("in 1");
+            audioSource.Play();
+        }
+        else
+        {
+            Debug.Log("in 2");
+            audioSource.Stop();
+        }
+        
 
         moveDirection = (x * transform.right + y * transform.forward).normalized;
     }
@@ -36,4 +55,5 @@ public class Player : MonoBehaviour
         // to get the player to fall correctly we need to add it back
         rb.velocity += correctYVelocity;
     }
+
 }

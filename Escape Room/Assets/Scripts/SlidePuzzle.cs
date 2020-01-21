@@ -99,8 +99,8 @@ public class SlidePuzzle : MonoBehaviour
                                         tile9.position = new Vector3(1, 2, 0);
                                         slot.position = new Vector3(-1, 2, 1);
 
-                                        trolley.transform.position = new Vector3(-1, 0.34f, -3);
-                                        teaPot.transform.position = new Vector3(-1, 1.6f, -3.16f);
+                                        trolley.transform.position = new Vector3(-3, 0.34f, -3);
+                                        teaPot.transform.position = new Vector3(-3, 1.6f, -3.16f);
                                         teaPot.GetComponent<Rigidbody>().useGravity = true;
                                     }
                                 }
