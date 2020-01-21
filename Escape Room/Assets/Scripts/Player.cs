@@ -24,12 +24,10 @@ public class Player : MonoBehaviour
         //gets input along x-axis
         float x = Input.GetAxis("Horizontal");
         x *= Time.deltaTime;
-        Debug.Log(x);
 
         //gets input along y-axis
         float y = Input.GetAxis("Vertical");
         y *= Time.deltaTime;
-        Debug.Log(y);
 
         
         if (x != 0 && y != 0)
